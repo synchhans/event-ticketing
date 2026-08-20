@@ -97,7 +97,7 @@
 
         <div class="footer-note">
             Satu QR Code hanya dapat di-scan 1 (satu) kali di gate venue. <br>
-            Powered by EventPass — SaaS Event Ticketing System.
+            Powered by <strong>SHC</strong> — SaaS Event Ticketing System.
         </div>
     </div>
 
