@@ -53,22 +53,22 @@ EventPass adalah aplikasi web manajemen event, pemesanan tiket online, generasi 
    ```
 
 2. **Buka Terminal di Text Editor (VS Code / Cursor / PHPStorm)**
-   Salin file konfigurasi `.env.example` menjadi `.env`:
+   Salin file `.env.example` menjadi `.env`:
    ```bash
    cp .env.example .env
    ```
 
-3. **Install Dependensi PHP**
+3. **Install Dependensi PHP & Generate Application Key**
    ```bash
    composer install
+   php artisan key:generate
    ```
 
-4. **Generate Key & Jalankan Migrasi Data**
+4. **Jalankan Migrasi Database & Seeder Data Demo**
    ```bash
-   php artisan key:generate
    php artisan migrate --seed
    ```
-   *(Jika muncul pertanyaan konfirmasi pembuatan database baru di terminal, ketik `y` atau tekan Enter).*
+   *(Jika muncul konfirmasi pembuatan database baru di terminal, ketik `y` atau tekan Enter).*
 
 5. **Install & Build Frontend Assets**
    ```bash
