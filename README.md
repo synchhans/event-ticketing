@@ -1,6 +1,6 @@
 # EventPass — Platform Tiket Event & QR Gate Pass Scanner Real-Time
 
-> Source Code Open Source dikembangkan untuk komunitas YouTube **[CodeWorshipper](https://www.youtube.com/@codeworshipper?sub_confirmation=1)**.
+> Source Code Open Source dikembangkan untuk komunitas YouTube <a href="https://www.youtube.com/@codeworshipper?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><strong>CodeWorshipper</strong></a>.
 
 ![EventPass Banner](https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80)
 
@@ -10,9 +10,9 @@ EventPass adalah aplikasi web manajemen event, pemesanan tiket online, generasi 
 
 ## Live Demo
 
-* **Situs Utama**: [https://event.eshace.com](https://event.eshace.com)
-* **Scanner Gate Panitia**: [https://event.eshace.com/scanner](https://event.eshace.com/scanner)
-* **Dashboard Admin**: [https://event.eshace.com/admin/dashboard](https://event.eshace.com/admin/dashboard)
+* **Situs Utama**: <a href="https://event.eshace.com" target="_blank" rel="noopener noreferrer">https://event.eshace.com</a>
+* **Scanner Gate Panitia**: <a href="https://event.eshace.com/scanner" target="_blank" rel="noopener noreferrer">https://event.eshace.com/scanner</a>
+* **Dashboard Admin**: <a href="https://event.eshace.com/admin/dashboard" target="_blank" rel="noopener noreferrer">https://event.eshace.com/admin/dashboard</a>
 
 ### Akun Demo Bawaan:
 * **Admin Control**:
@@ -22,7 +22,7 @@ EventPass adalah aplikasi web manajemen event, pemesanan tiket online, generasi 
   * Email: `scanner@eshace.com`
   * Password: `password123`
 * **Demo E-Tiket Valid**:
-  * URL: [https://event.eshace.com/ticket/TKT-2026-0001](https://event.eshace.com/ticket/TKT-2026-0001)
+  * URL: <a href="https://event.eshace.com/ticket/TKT-2026-0001" target="_blank" rel="noopener noreferrer">https://event.eshace.com/ticket/TKT-2026-0001</a>
 
 ---
 
@@ -85,4 +85,4 @@ EventPass adalah aplikasi web manajemen event, pemesanan tiket online, generasi 
 
 ## Lisensi
 
-Project ini dilisensikan di bawah **MIT License**. Powered by **[SHC](https://eshace.com)** for **[CodeWorshipper](https://www.youtube.com/@codeworshipper?sub_confirmation=1)**.
+Project ini dilisensikan di bawah **MIT License**. Powered by <a href="https://eshace.com" target="_blank" rel="noopener noreferrer"><strong>SHC</strong></a> for <a href="https://www.youtube.com/@codeworshipper?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><strong>CodeWorshipper</strong></a>.
