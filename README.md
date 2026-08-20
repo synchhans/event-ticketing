@@ -1,6 +1,6 @@
 # EventPass — Platform Tiket Event & QR Gate Pass Scanner Real-Time
 
-> Source Code Open Source dikembangkan untuk komunitas YouTube **[CodeWorshipper](https://youtube.com)**.
+> Source Code Open Source dikembangkan untuk komunitas YouTube **[CodeWorshipper](https://www.youtube.com/@codeworshipper?sub_confirmation=1)**.
 
 ![EventPass Banner](https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80)
 

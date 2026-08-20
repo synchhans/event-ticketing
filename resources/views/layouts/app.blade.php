@@ -87,7 +87,7 @@
     <footer class="border-t border-slate-800 bg-slate-900/50 py-8 text-center text-xs text-slate-500">
         <div class="max-w-7xl mx-auto px-4 space-y-2">
             <p class="font-bold text-slate-400">EventPass — Ultimate Event Ticketing & QR Gate Pass Scanner Platform</p>
-            <p class="font-light text-[10px]">Source Code Gratis untuk YouTube Channel <a href="https://youtube.com" target="_blank" class="text-emerald-400 hover:underline">CodeWorshipper</a>. Powered by <strong class="text-emerald-400 font-bold">SHC</strong>.</p>
+            <p class="font-light text-[10px]">Source Code Gratis untuk YouTube Channel <a href="https://www.youtube.com/@codeworshipper?sub_confirmation=1" target="_blank" class="text-emerald-400 hover:underline">CodeWorshipper</a>. Powered by <strong class="text-emerald-400 font-bold">SHC</strong>.</p>
         </div>
     </footer>
 
