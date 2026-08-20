@@ -2,6 +2,8 @@
 
 > Source Code Open Source dikembangkan untuk komunitas YouTube **[CodeWorshipper](https://youtube.com)**.
 
+![EventPass Banner](https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80)
+
 EventPass adalah aplikasi web manajemen event, pemesanan tiket online, generasi E-Tiket digital ber-QR Code unik, dan pemindaian pintu masuk (Gate Pass Scanner) berbasis kamera HP/Laptop secara real-time.
 
 ---
