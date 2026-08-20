@@ -85,4 +85,4 @@ EventPass adalah aplikasi web manajemen event, pemesanan tiket online, generasi 
 
 ## Lisensi
 
-Project ini dilisensikan di bawah **MIT License**. Powered by **SHC** for **CodeWorshipper**.
+Project ini dilisensikan di bawah **MIT License**. Powered by **[SHC](https://eshace.com)** for **[CodeWorshipper](https://www.youtube.com/@codeworshipper?sub_confirmation=1)**.

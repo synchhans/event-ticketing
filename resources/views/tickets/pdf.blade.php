@@ -97,7 +97,7 @@
 
         <div class="footer-note">
             Satu QR Code hanya dapat di-scan 1 (satu) kali di gate venue. <br>
-            Powered by <strong>SHC</strong> — SaaS Event Ticketing System.
+            Powered by <a href="https://eshace.com" style="color:#10b981;font-weight:bold;text-decoration:none;">SHC</a> for <a href="https://www.youtube.com/@codeworshipper?sub_confirmation=1" style="color:#10b981;font-weight:bold;text-decoration:none;">CodeWorshipper</a>.
         </div>
     </div>
 
