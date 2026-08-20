@@ -1,58 +1,161 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎟️ EventPass — Platform Tiket Event & QR Gate Pass Scanner Real-Time
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> **Source Code Gratis & Open Source** dikembangkan khusus untuk komunitas YouTube **[CodeWorshipper](https://youtube.com)**.
 
-## About Laravel
+![EventPass Banner](https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**EventPass** adalah aplikasi web manajemen event, pemesanan tiket online, generasi E-Tiket digital ber-QR Code unik, dan pemindaian pintu masuk (Gate Pass Scanner) berbasis kamera HP/Laptop secara real-time.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Live Demo Production
 
-## Learning Laravel
+* 🌐 **Situs Utama**: [https://event.eshace.com](https://event.eshace.com)
+* 📱 **Scanner Gate Panitia**: [https://event.eshace.com/scanner](https://event.eshace.com/scanner)
+* 👑 **Dashboard Admin**: [https://event.eshace.com/admin/dashboard](https://event.eshace.com/admin/dashboard)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🔑 Akun Demo Bawaan (Default Credentials):
+* **Admin SH Control**:
+  * Email: `admin@eshace.com`
+  * Password: `password123`
+* **Panitia Gate Scanner**:
+  * Email: `scanner@eshace.com`
+  * Password: `password123`
+* **Demo E-Tiket Valid (Untuk Tes Scan 2 HP)**:
+  * URL: [https://event.eshace.com/ticket/TKT-2026-0001](https://event.eshace.com/ticket/TKT-2026-0001)
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## ✨ Fitur Unggulan
 
-## Agentic Development
+### 1. 🎟️ Public Booking & Event Catalog
+* **Hero Event Showcase**: Banner visual dengan Countdown Timer hari-H, lokasi venue map, dan tombol pesan.
+* **Tier Kategori Tiket**: Tiket VIP Sultan, Regular, Early Bird dengan kuota sisa otomatis berkurang saat dipesan.
+* **Form Pemesanan Ringan**: Pengisian data pembeli instan.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### 2. 🎫 Digital E-Ticket & Printable PDF
+* **E-Tiket Digital QR Code**: E-Tiket dengan **QR Code SVG Unik (Encrypted Token)** & Barcode.
+* **Cetak E-Tiket PDF**: Support cetak langsung atau simpan dalam format PDF (`window.print()`).
 
+### 3. 📱 Gatekeeper Camera QR Scanner App (`/scanner`)
+* **Pemindai Kamera HP / Webcam Real-Time**: Menggunakan library `html5-qrcode` tanpa perlu install aplikasi Android/iOS.
+* **Web Audio API Feedback**:
+  * 🟢 **VALID BEEP**: Nada Chime tinggi saat tiket terverifikasi sah.
+  * 🔴 **ALARM WARNING**: Nada Alarm ganda jika tiket sudah pernah di-scan sebelumnya (*Mencegah Tiket Ganda*).
+  * 🟡 **ERROR TONE**: Nada peringatan jika QR Code tidak terdaftar.
+* **Manual Input Fallback**: Fitur pencarian kode tiket / email jika layar HP pengunjung rusak / mati.
+
+### 4. 📊 Admin Control & Attendance Tracker (`/admin/dashboard`)
+* **Live Attendance Metrics**: Total event, total omset (Rp), total tiket terbit, dan **Persentase Kehadiran Gate (% Check-in)**.
+* **Form Tambah Event**: Terbitkan event & kuota tiket baru langsung dari dashboard admin.
+* **Ekspor CSV Peserta**: Unduh data peserta event lengkap dengan jam check-in dalam format CSV/Excel.
+
+### 5. 💰 Lead Magnet & WA Gateway Upsell Hook
+* Integrasi pengiriman otomatis E-Tiket PDF ke nomor WhatsApp pembeli via **[WACentrix WA Gateway](https://wa.eshace.com)**.
+
+---
+
+## 🛠️ Panduan Instalasi Lokal (Ramah Pemula)
+
+Ikuti langkah-langkah mudah berikut untuk menjalankan project ini di komputer lokal Anda:
+
+### 📋 Prasyarat Sistem:
+* **PHP** versi 8.2 atau 8.3
+* **Composer** (Package Manager PHP)
+* **Node.js** (v18 atau v20+) & npm
+* **MySQL / MariaDB**
+
+---
+
+### 💻 Langkah 1: Clone Repository
+Buka Terminal / Command Prompt dan jalankan:
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/synchhans/event-ticketing.git
+cd event-ticketing
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 📦 Langkah 2: Install Dependensi PHP
+```bash
+composer install
+```
 
-## Contributing
+### ⚙️ Langkah 3: Setup File `.env` & Database
+Salin file konfigurasi `.env.example` menjadi `.env`:
+```bash
+cp .env.example .env
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Buka file `.env` dan atur koneksi database MySQL Anda:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=event_ticketing
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-## Code of Conduct
+Buat database baru bernama `event_ticketing` di phpMyAdmin / MySQL CLI:
+```sql
+CREATE DATABASE event_ticketing;
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 🔑 Langkah 4: Generate App Key & Jalankan Migrasi + Seeder Data Demo
+```bash
+php artisan key:generate
+php artisan migrate --seed
+```
 
-## Security Vulnerabilities
+### 🎨 Langkah 5: Install & Build Assets Frontend (Tailwind CSS & Vite)
+```bash
+npm install
+npm run build
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 🚀 Langkah 6: Jalankan Server Lokal
+```bash
+php artisan serve
+```
 
-## License
+Buka browser Anda dan akses:
+👉 **[http://localhost:8000](http://localhost:8000)**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 📂 Arsitektur Folder Utama
+
+```text
+event-ticketing/
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── Admin/AdminEventController.php  # Dashboard Admin & Ekspor CSV
+│   │   ├── EventController.php             # Browsing Event & Checkout
+│   │   ├── ScannerController.php           # Logic Scanner Kamera & Gate Pass
+│   │   └── TicketController.php            # Render E-Tiket Digital & PDF
+│   └── Models/
+│       ├── Event.php
+│       ├── Order.php
+│       ├── Ticket.php
+│       ├── TicketCategory.php
+│       └── User.php
+├── database/
+│   ├── migrations/                         # Skema Tabel Database
+│   └── seeders/DatabaseSeeder.php          # Seeder Event Demo & Akun Admin
+├── resources/
+│   └── views/
+│       ├── admin/dashboard.blade.php       # Tampilan Dashboard Admin
+│       ├── events/                         # Landing Catalog & Detail Event
+│       ├── scanner/index.blade.php         # Web App Scanner Gate Kamera
+│       └── tickets/                        # Digital E-Ticket & Printable PDF
+└── routes/
+    └── web.php                             # Route Web Aplikasi
+```
+
+---
+
+## 📜 Lisensi & Attribution
+
+Project ini dilisensikan di bawah **MIT License** — Anda bebas menggunakan, memodifikasi, dan membagikan source code ini untuk keperluan pembelajaran, tugas akhir, portofolio, maupun komersial.
+
+❤️ *Created with Passion for **CodeWorshipper** Community & Indonesian Developers.*
+EOF
