@@ -69,11 +69,14 @@
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white bg-mesh relative overflow-x-hidden">
+<body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white bg-mesh relative overflow-x-hidden" x-data="scrollEngine4D()" @scroll.window="onScroll()" @mousemove.window="onMouseMove($event)">
 
-    <!-- Ambient Lighting Background -->
-    <div class="fixed top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
-    <div class="fixed top-1/3 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
+    <!-- Top Laser Scroll Progress Indicator Bar -->
+    <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-500 z-[100] transition-all duration-150 shadow-[0_0_15px_rgba(16,185,129,0.8)]" :style="`width: ${scrollPercent}%;`"></div>
+
+    <!-- Ambient Lighting Background with 4D Parallax Offset -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none z-0 transition-transform duration-300 ease-out" :style="`transform: translate3d(${mouseX * -30}px, ${scrollY * 0.15}px, 0);`"></div>
+    <div class="fixed top-1/3 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-[160px] pointer-events-none z-0 transition-transform duration-300 ease-out" :style="`transform: translate3d(${mouseX * 30}px, ${scrollY * -0.1}px, 0);`"></div>
 
     <!-- Top Navigation Header -->
     <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80 transition-all duration-300">
@@ -95,7 +98,7 @@
                             Event<span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Pass</span>
                         </span>
                         <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 rounded-full text-[9px] font-extrabold uppercase tracking-widest flex items-center gap-1.5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> SYSTEM LIVE
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> 4D SYSTEM
                         </span>
                     </div>
                     <span class="text-[10px] text-slate-400 font-medium tracking-wider uppercase">Ticketing & Gate Scanner</span>
@@ -186,7 +189,28 @@
                 </p>
             </div>
         </div>
-        <script>
+    </footer>
+
+    <!-- Global 4D Scroll Spatiotemporal Motion Script -->
+    <script>
+        function scrollEngine4D() {
+            return {
+                scrollY: 0,
+                scrollPercent: 0,
+                mouseX: 0,
+                mouseY: 0,
+                onScroll() {
+                    this.scrollY = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    this.scrollPercent = docHeight > 0 ? (this.scrollY / docHeight) * 100 : 0;
+                },
+                onMouseMove(e) {
+                    this.mouseX = (e.clientX / window.innerWidth) - 0.5;
+                    this.mouseY = (e.clientY / window.innerHeight) - 0.5;
+                }
+            }
+        }
+
         function tiltCard() {
             return {
                 rotateX: 0,
@@ -202,12 +226,12 @@
                     const centerX = rect.width / 2;
                     const centerY = rect.height / 2;
                     
-                    this.rotateX = -((y - centerY) / 14).toFixed(2);
-                    this.rotateY = ((x - centerX) / 14).toFixed(2);
-                    this.scale = 1.03;
+                    this.rotateX = -((y - centerY) / 10).toFixed(2);
+                    this.rotateY = ((x - centerX) / 10).toFixed(2);
+                    this.scale = 1.04;
                     this.glareX = (x / rect.width) * 100;
                     this.glareY = (y / rect.height) * 100;
-                    this.glareOpacity = 0.2;
+                    this.glareOpacity = 0.25;
                 },
                 onMouseLeave() {
                     this.rotateX = 0;

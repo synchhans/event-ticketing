@@ -5,55 +5,55 @@
 @layer utilities {
   .bg-mesh {
     background-image: 
-      radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.22) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.22) 0px, transparent 50%),
-      radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.12) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.25) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.25) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.15) 0px, transparent 50%);
   }
 
-  .perspective-1000 {
-    perspective: 1000px;
+  .perspective-1200 {
+    perspective: 1200px;
   }
 
   .preserve-3d {
     transform-style: preserve-3d;
   }
 
-  .glass-panel {
-    background: rgba(11, 17, 31, 0.82);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+  .translate-z-12 {
+    transform: translateZ(48px);
   }
 
-  .glass-card {
-    background: rgba(18, 26, 45, 0.55);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  .translate-z-20 {
+    transform: translateZ(80px);
+  }
+
+  .glass-panel {
+    background: rgba(11, 17, 31, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+  }
+
+  .glass-card-4d {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s ease;
     transform-style: preserve-3d;
   }
 
-  .glass-card:hover {
-    background: rgba(24, 35, 59, 0.85);
+  .glass-card-4d:hover {
     border-color: rgba(16, 185, 129, 0.6);
-    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 35px 0 rgba(16, 185, 129, 0.25);
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.9), 0 0 40px 0 rgba(16, 185, 129, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   }
 
-  .glow-emerald {
-    box-shadow: 0 0 40px -5px rgba(16, 185, 129, 0.5);
-  }
-
-  .glow-indigo {
-    box-shadow: 0 0 40px -5px rgba(99, 102, 241, 0.5);
-  }
-
-  .glow-amber {
-    box-shadow: 0 0 40px -5px rgba(245, 158, 11, 0.5);
+  .glow-emerald-4d {
+    box-shadow: 0 0 50px -5px rgba(16, 185, 129, 0.55), 0 20px 40px -10px rgba(0, 0, 0, 0.8);
   }
 
   .glow-text-emerald {
-    text-shadow: 0 0 20px rgba(16, 185, 129, 0.7);
+    text-shadow: 0 0 24px rgba(16, 185, 129, 0.7);
   }
 
   /* Shimmer Animated Text */
@@ -62,12 +62,12 @@
     animation: shimmer 3s linear infinite;
   }
 
-  /* Cyber Grid Background */
-  .cyber-grid {
-    background-size: 32px 32px;
+  /* Cyber Grid Perspective Floor */
+  .cyber-grid-4d {
+    background-size: 40px 40px;
     background-image: 
-      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(to right, rgba(16, 185, 129, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
   }
 }
 
@@ -77,33 +77,24 @@
   }
 }
 
-@keyframes scanline {
-  0% { transform: translateY(-100%); }
-  50% { transform: translateY(100%); }
-  100% { transform: translateY(-100%); }
+@keyframes laser-sweep {
+  0% { transform: translateY(-120%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(220%); opacity: 0; }
 }
 
-.animate-scanline {
-  animation: scanline 2.2s ease-in-out infinite;
+.animate-laser-sweep {
+  animation: laser-sweep 3s ease-in-out infinite;
 }
 
-@keyframes float-epic {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(1deg); }
+@keyframes float-4d {
+  0%, 100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg) translateZ(30px); }
+  25% { transform: translateY(-10px) rotateX(4deg) rotateY(-4deg) translateZ(45px); }
+  75% { transform: translateY(10px) rotateX(-4deg) rotateY(4deg) translateZ(20px); }
 }
 
-.animate-float-epic {
-  animation: float-epic 5s ease-in-out infinite;
-}
-
-@keyframes pulse-ring {
-  0% { transform: scale(0.95); opacity: 0.8; }
-  50% { transform: scale(1.05); opacity: 0.4; }
-  100% { transform: scale(0.95); opacity: 0.8; }
-}
-
-.animate-pulse-ring {
-  animation: pulse-ring 3s ease-in-out infinite;
+.animate-float-4d {
+  animation: float-4d 6s ease-in-out infinite;
 }
 
 /* Custom Scrollbar */

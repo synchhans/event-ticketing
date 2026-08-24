@@ -1,11 +1,11 @@
-<x-app-layout title="EventPass — Next-Gen Event Ticketing & Live QR Gate Scanner">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+<x-app-layout title="EventPass — 4D Real-Time Event Ticketing & Cyber Gate Pass Scanner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
         
         <!-- Live Ticker Announcement Bar -->
-        <div class="glass-panel rounded-full p-2.5 px-6 border border-emerald-500/30 flex items-center justify-between gap-4 shadow-xl backdrop-blur-md glow-emerald">
+        <div class="glass-panel rounded-full p-2.5 px-6 border border-emerald-500/40 flex items-center justify-between gap-4 shadow-xl backdrop-blur-md glow-emerald-4d">
             <div class="flex items-center gap-3 truncate">
-                <span class="px-3 py-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full text-[10px] font-heading font-black uppercase tracking-widest shrink-0 animate-pulse">
-                    LIVE NOW
+                <span class="px-3.5 py-1 bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 text-white rounded-full text-[10px] font-heading font-black uppercase tracking-widest shrink-0 animate-pulse">
+                    4D LIVE SYSTEM
                 </span>
                 <span class="text-xs font-bold text-slate-200 truncate">
                     CodeWorshipper Tech Fest 2026 Tiket Presale Terbit! Kuota Terbatas.
@@ -17,29 +17,32 @@
             </a>
         </div>
 
-        <!-- Mega Epic Hero Showcase Stage -->
-        <div class="relative rounded-[40px] overflow-hidden bg-slate-900/90 border border-slate-800 p-8 sm:p-16 lg:p-20 shadow-2xl cyber-grid">
-            <!-- Ambient Epic Lighting Spheres -->
-            <div class="absolute -right-20 -bottom-20 w-[550px] h-[550px] bg-gradient-to-br from-emerald-500/25 via-teal-500/15 to-transparent rounded-full blur-[140px] pointer-events-none"></div>
-            <div class="absolute -left-20 -top-20 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-500/25 via-purple-500/15 to-transparent rounded-full blur-[140px] pointer-events-none"></div>
+        <!-- 4D Interactive Scroll Hero Stage (Spatiotemporal Depth Motion) -->
+        <div class="relative rounded-[44px] overflow-hidden bg-slate-900/90 border border-emerald-500/30 p-8 sm:p-16 lg:p-20 shadow-2xl cyber-grid-4d perspective-1200 transition-all duration-150 ease-out preserve-3d"
+             :style="`transform: perspective(1200px) rotateX(${Math.min(18, scrollY * 0.035)}deg) rotateY(${mouseX * 12}deg) scale(${1 - Math.min(0.08, scrollY * 0.00015)});`">
+            
+            <!-- Ambient 4D Glow Orbs -->
+            <div class="absolute -right-24 -bottom-24 w-[600px] h-[600px] bg-gradient-to-br from-emerald-500/30 via-teal-500/20 to-transparent rounded-full blur-[150px] pointer-events-none"></div>
+            <div class="absolute -left-24 -top-24 w-[550px] h-[550px] bg-gradient-to-tr from-indigo-500/30 via-purple-500/20 to-transparent rounded-full blur-[150px] pointer-events-none"></div>
 
-            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center preserve-3d">
+                
                 <!-- Left Content Column -->
-                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 bg-slate-950/80 border border-emerald-500/40 backdrop-blur-md rounded-full shadow-lg">
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left preserve-3d">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 bg-slate-950/90 border border-emerald-500/40 backdrop-blur-md rounded-full shadow-lg">
                         <svg class="w-4 h-4 text-emerald-400 animate-spin" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
-                        <span class="text-xs font-black text-emerald-400 uppercase tracking-widest">NEXT-GEN EVENT TICKETING & GATE SYSTEM</span>
+                        <span class="text-xs font-black text-emerald-400 uppercase tracking-widest">4D SPATIOTEMPORAL EVENT PLATFORM</span>
                     </div>
 
                     <h1 class="text-4xl sm:text-6xl lg:text-7xl font-heading font-black text-white tracking-tight leading-[1.05]">
                         Platform Tiket Event <br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 animate-shimmer glow-text-emerald">
-                            & Gate Pass Real-Time
+                            & 4D Gate Pass Scanner
                         </span>
                     </h1>
 
                     <p class="text-slate-300 text-sm sm:text-lg font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                        Kelola event profesional dengan pemesanan tiket otomatis, E-Tiket PDF ber-QR Code unforgeable, dan pemindaian gate tercepat (0.2s) langsung lewat kamera HP/Laptop panitia.
+                        Sistem e-ticketing paling responsif dengan integrasi QR Code unforgeable dan kecepatan verifikasi pintu gate 0.18 detik via kamera HP/Laptop panitia.
                     </p>
 
                     <!-- CTA Action Buttons -->
@@ -55,46 +58,49 @@
                     </div>
                 </div>
 
-                <!-- Right Interactive 3D QR Demo Scanner Sandbox -->
-                <div class="lg:col-span-5 relative" x-data="heroDemoScanner()">
-                    <div class="glass-card rounded-[36px] p-6 sm:p-8 space-y-6 border border-emerald-500/30 shadow-2xl relative z-10 animate-float-epic glow-emerald preserve-3d">
+                <!-- Right 4D Floating Ticket Pass Widget (Floats 60px Out of Screen) -->
+                <div class="lg:col-span-5 relative preserve-3d" x-data="heroDemoScanner()">
+                    <div class="glass-card-4d rounded-[40px] p-6 sm:p-8 space-y-6 border border-emerald-500/40 shadow-2xl relative z-10 animate-float-4d glow-emerald-4d preserve-3d"
+                         :style="`transform: translateZ(50px) rotateY(${mouseX * -15}deg);`">
                         
+                        <!-- Moving Laser Beam Scanner Overlay -->
+                        <div class="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent shadow-[0_0_20px_#10b981] animate-laser-sweep z-20 pointer-events-none"></div>
+
                         <!-- Header Bar -->
-                        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-4 preserve-3d">
                             <div class="flex items-center gap-2">
                                 <span class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></span>
-                                <span class="text-xs font-heading font-black text-white uppercase tracking-wider">Simulasi QR Gate Pass</span>
+                                <span class="text-xs font-heading font-black text-white uppercase tracking-wider">Simulasi 4D Gate Pass</span>
                             </div>
-                            <span class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-mono font-bold">INTERACTIVE DEMO</span>
+                            <span class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-mono font-bold">4D MOTION</span>
                         </div>
 
-                        <!-- Simulated Holographic Ticket Pass -->
-                        <div class="p-5 bg-slate-950 rounded-2xl border border-slate-800 space-y-4 text-center">
-                            <div class="p-4 bg-white rounded-2xl inline-block shadow-2xl border-2 border-emerald-500/40 relative group">
+                        <!-- Simulated Floating Holographic Ticket Pass -->
+                        <div class="p-6 bg-slate-950/90 rounded-3xl border border-slate-800 space-y-5 text-center preserve-3d shadow-2xl">
+                            <div class="p-5 bg-white rounded-3xl inline-block shadow-2xl border-4 border-emerald-500/40 relative group transition-transform duration-300 hover:scale-105">
                                 <svg class="w-28 h-28 text-slate-950 mx-auto" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zm-3 3h2v3h-2v-3zm3 0h3v5h-3v-5zm-3 3h2v2h-2v-2z"/>
                                 </svg>
-                                <div class="absolute inset-0 bg-emerald-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"></div>
                             </div>
 
                             <div class="space-y-1">
-                                <span class="text-[10px] text-slate-500 font-mono uppercase font-bold tracking-wider">Kode Demo E-Tiket</span>
-                                <h4 class="text-sm font-mono font-black text-emerald-400">TKT-2026-DEMO-001</h4>
+                                <span class="text-[10px] text-slate-500 font-mono uppercase font-bold tracking-wider">Kode Demo E-Tiket 4D</span>
+                                <h4 class="text-base font-mono font-black text-emerald-400">TKT-2026-4D-PASSPRO</h4>
                             </div>
 
                             <!-- Interactive Demo Scan Button -->
-                            <button @click="testScan()" class="w-full py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+                            <button @click="testScan()" class="w-full py-3.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 hover:from-emerald-400 hover:to-teal-400 text-white rounded-2xl text-xs font-heading font-black uppercase tracking-wider transition shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-2">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5zM13.5 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5z"/></svg>
                                 <span>Uji Coba Scan Simulasi Gate</span>
                             </button>
                         </div>
 
                         <!-- Result Toast Feedback -->
-                        <div x-show="demoScanned" class="p-4 bg-emerald-950/90 border border-emerald-500/50 text-emerald-300 rounded-2xl text-xs font-bold flex items-center justify-between gap-3 shadow-xl backdrop-blur-md glow-emerald" style="display: none;" x-transition>
+                        <div x-show="demoScanned" class="p-4 bg-emerald-950/95 border border-emerald-500/50 text-emerald-300 rounded-2xl text-xs font-bold flex items-center justify-between gap-3 shadow-xl backdrop-blur-md glow-emerald-4d" style="display: none;" x-transition>
                             <div class="flex items-center gap-3">
                                 <svg class="w-6 h-6 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                 <div>
-                                    <h5 class="font-heading font-black text-white">GATE ACCESSED — VERIFIED 🟢</h5>
+                                    <h5 class="font-heading font-black text-white">4D GATE ACCESSED — VERIFIED 🟢</h5>
                                     <p class="text-[10px] text-emerald-400">Pengunjung: CodeWorshipper VIP • Respon Gate: 0.18s</p>
                                 </div>
                             </div>
@@ -108,7 +114,7 @@
         <!-- Bento Box Architectural Grid Showcase -->
         <div class="space-y-8">
             <div class="text-center space-y-2 max-w-2xl mx-auto">
-                <span class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-full text-[10px] font-mono font-bold uppercase tracking-widest">
+                <span class="px-3.5 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-full text-[10px] font-mono font-bold uppercase tracking-widest">
                     SYSTEM ARCHITECTURE
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-heading font-black text-white">Fitur Unggulan Kelas Enterprise</h2>
@@ -118,7 +124,7 @@
             <!-- Asymmetric Bento Grid -->
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                 <!-- Bento 1 (Large 7 Cols) -->
-                <div class="md:col-span-7 glass-card rounded-[32px] p-8 space-y-6 border border-slate-800 flex flex-col justify-between group">
+                <div class="md:col-span-7 glass-card-4d rounded-[36px] p-8 space-y-6 border border-slate-800 flex flex-col justify-between group">
                     <div class="space-y-4">
                         <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5zM13.5 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5z"/></svg>
@@ -136,7 +142,7 @@
                 </div>
 
                 <!-- Bento 2 (Small 5 Cols) -->
-                <div class="md:col-span-5 glass-card rounded-[32px] p-8 space-y-6 border border-slate-800 flex flex-col justify-between group">
+                <div class="md:col-span-5 glass-card-4d rounded-[36px] p-8 space-y-6 border border-slate-800 flex flex-col justify-between group">
                     <div class="space-y-4">
                         <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751A11.959 11.959 0 0112 2.714z"/></svg>
@@ -169,7 +175,7 @@
                 @forelse($events as $event)
                     <div x-data="tiltCard()" @mousemove="onMouseMove($event)" @mouseleave="onMouseLeave()" 
                          :style="`transform: perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale});`"
-                         class="glass-card rounded-[32px] overflow-hidden flex flex-col justify-between group relative transition-transform duration-200 ease-out preserve-3d">
+                         class="glass-card-4d rounded-[32px] overflow-hidden flex flex-col justify-between group relative transition-transform duration-200 ease-out preserve-3d">
                         <!-- Dynamic Glare Light Sheen -->
                         <div class="absolute inset-0 pointer-events-none rounded-[32px] transition-opacity duration-300 z-30"
                              :style="`background: radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.25) 0%, transparent 60%); opacity: ${glareOpacity};`"></div>
@@ -225,7 +231,7 @@
                         </div>
                     </div>
                 @empty
-                    <div class="col-span-full py-16 text-center text-slate-500 glass-card rounded-3xl">
+                    <div class="col-span-full py-16 text-center text-slate-500 glass-card-4d rounded-3xl">
                         <p class="text-base font-bold text-slate-400">Belum Ada Event Yang Diterbitkan.</p>
                     </div>
                 @endforelse
@@ -233,7 +239,7 @@
         </div>
 
         <!-- Upsell Banner -->
-        <div class="relative rounded-[36px] overflow-hidden p-8 sm:p-12 glass-panel border border-emerald-500/30 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8 glow-emerald">
+        <div class="relative rounded-[36px] overflow-hidden p-8 sm:p-12 glass-panel border border-emerald-500/30 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8 glow-emerald-4d">
             <div class="space-y-3 text-center lg:text-left">
                 <span class="px-3.5 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/30 rounded-full text-[10px] font-black uppercase tracking-wider flex items-center gap-1.5 w-max mx-auto lg:mx-0">
                     <svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
