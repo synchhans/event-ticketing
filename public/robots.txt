@@ -1,2 +1,12 @@
 User-agent: *
-Disallow:
+Allow: /
+Allow: /event/*
+Allow: /scanner
+Allow: /ticket/*
+Disallow: /admin/
+Disallow: /api/
+Disallow: /profile
+Disallow: /login
+Disallow: /register
+
+Sitemap: https://event.eshace.com/sitemap.xml

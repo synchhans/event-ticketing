@@ -4,11 +4,13 @@ use App\Http\Controllers\Admin\AdminEventController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ScannerController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 
 // Public Event Browsing & Booking
 Route::get('/', [EventController::class, 'index'])->name('home');
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 Route::get('/event/{slug}', [EventController::class, 'show'])->name('events.show');
 Route::post('/event/{slug}/checkout', [EventController::class, 'checkout'])->name('events.checkout');
 
