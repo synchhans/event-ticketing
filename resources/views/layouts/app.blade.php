@@ -34,6 +34,7 @@
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80">
 
     <!-- JSON-LD Structured Data for Google Rich Snippets -->
+    @verbatim
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -49,6 +50,7 @@
       "description": "Platform SaaS e-ticketing event online dan scanner pintu masuk gate QR code real-time."
     }
     </script>
+    @endverbatim
 
     <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
